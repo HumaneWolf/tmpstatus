@@ -24,9 +24,11 @@
     
 	  foreach ($status['response'] as $row) {
       $serveronlinebar = "";
-      
-      $maxplayers = $maxplayers + $row['maxplayers'];
-      $players = $players + $row['players'];
+      if ($row['online'] == 'true') {
+        $maxplayers = $maxplayers + $row['maxplayers'];
+        $players = $players + $row['players'];
+      }
+
       
 		  $content .= '<div class="field ';
       
@@ -43,12 +45,17 @@
       $onlinepercent = round($onlinepercent);
       
       $serveronlinebar .= '<div class="bar">';
-      
-      for ($i = 1; $i <= $onlinepercent; $i++) {
-        $serveronlinebar .= '<div class="red"></div>';
-      }
-      for ($k = $onlinepercent + 1; $k <= 100; $k++) {
-        $serveronlinebar .= '<div class="green"></div>';
+      if ($row['online'] == 'true') {
+        for ($i = 1; $i <= $onlinepercent; $i++) {
+          $serveronlinebar .= '<div class="red"></div>';
+        }
+        for ($k = $onlinepercent + 1; $k <= 100; $k++) {
+          $serveronlinebar .= '<div class="green"></div>';
+        }
+      } else {
+        for ($k = 1; $k <= 100; $k++) {
+          $serveronlinebar .= '<div class="black"></div>';
+        }
       }
       $serveronlinebar .= '</div>';
       
@@ -95,58 +102,6 @@
     <link rel="stylesheet" type="text/css" href="style.css">
 
     <title>TruckersMP Server Status</title>
-
-    <style>
-      .online {
-        color: #008A00;
-      }
-      
-      .offline {
-        color: #FF0000;
-      }
-      
-      .bar {
-        display: block;
-        margin-left: 20px;
-        margin-right: 20px;
-        margin-bottom: 50px;
-      }
-      
-      .legend {
-        max-height: 0px;
-        overflow: hidden;
-        position: absolute;
-        margin-top: -25px;
-        
-        transition: linear 0.5s;
-        -moz-transition: linear 0.5s;
-        -ie-transition: linear 0.5s;
-        -o-transition: linear 0.5s;
-        -webkit-transition: linear 0.5s;
-      }
-      
-      .bar:hover ~ .legend, .bar:focus ~ .legend {
-        max-height: 900px;
-      }
-      
-      .red {
-        background-color: rgba(255, 0, 0, 0.5);
-        height: 20px;
-        width: 1%;
-        display: inline-block;
-        float: left;
-        margin: 0;
-      }
-      
-      .green {
-        background-color: rgba(0, 138, 0, 0.5);
-        height: 20px;
-        width: 1%;
-        display: inline-block;
-        float: left;
-        margin: 0;
-      }
-    </style>
   </head>
   <body>
     <div class="wrapper">

@@ -195,3 +195,63 @@ body {
         max-height: 9999px;
     }
 }
+
+
+.online {
+	color: #008A00;
+}
+
+.offline {
+	color: #FF0000;
+}
+
+.bar {
+	display: block;
+	margin-left: 20px;
+	margin-right: 20px;
+	margin-bottom: 50px;
+}
+
+.legend {
+	max-height: 0px;
+	overflow: hidden;
+	position: absolute;
+	margin-top: -25px;
+
+	transition: linear 0.5s;
+	-moz-transition: linear 0.5s;
+	-ie-transition: linear 0.5s;
+	-o-transition: linear 0.5s;
+	-webkit-transition: linear 0.5s;
+}
+
+.bar:hover ~ .legend, .bar:focus ~ .legend {
+	max-height: 900px;
+}
+
+.red {
+	background-color: rgba(255, 0, 0, 0.5);
+	height: 20px;
+	width: 1%;
+	display: inline-block;
+	float: left;
+	margin: 0;
+}
+
+.green {
+	background-color: rgba(0, 138, 0, 0.5);
+	height: 20px;
+	width: 1%;
+	display: inline-block;
+	float: left;
+	margin: 0;
+}
+
+.black {
+	background-color: rgba(0, 0, 0, 0.5);
+	height: 20px;
+	width: 1%;
+	display: inline-block;
+	float: left;
+	margin: 0;
+}
