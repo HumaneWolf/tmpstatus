@@ -20,6 +20,7 @@ body {
 	background-color: #000000;
 	background-image: url(bg.jpg);
 	background-position: 00px top center;
+	background-attachment: fixed;
 }
 
 .html .body {
