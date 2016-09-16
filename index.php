@@ -12,6 +12,7 @@
 
   $json = file_get_contents("status.json");
   $status = json_decode($json, TRUE);
+  //Todo: Better error handling in case the API is down or doesn't serve proper json due to server issues, etc.
   
   if ($status['error'] != "false") {
 	  $content .= '
