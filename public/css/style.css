@@ -19,7 +19,7 @@ body {
 	background-repeat: no-repeat;
 	background-color: #000000;
 	background-image: url(../img/bg.jpg);
-	background-position: 00px top center;
+	background-position: 50% top;
 	background-attachment: fixed;
 }
 
@@ -150,52 +150,6 @@ body {
 	width: 100%;
 	text-align: center;
 }
-
-/* FIELD LOADING ANIMATION */
-/*.field.right.no {
-	overflow: hidden;
-
-    -moz-animation-name: dropHeader;
-    -moz-animation-iteration-count: 1;
-    -moz-animation-timing-function: ease-in;
-    -moz-animation-duration: 0.9s;
-
-    -webkit-animation-name: dropHeader;
-    -webkit-animation-iteration-count: 1;
-    -webkit-animation-timing-function: ease-in;
-    -webkit-animation-duration: 0.9s;
-
-    animation-name: dropHeader;
-    animation-iteration-count: 1;
-    animation-timing-function: ease-in;
-    animation-duration: 0.9s;
-}
-
-@-moz-keyframes dropHeader {
-    from {
-        max-height: 0px;
-    }
-    to {
-        max-height: 9999px;
-    }
-}
-@-webkit-keyframes dropHeader {
-    from {
-        max-height: 0px;
-    }
-    to {
-        max-height: 9999px;
-    }
-}
-@keyframes dropHeader {
-    from {
-        max-height: 0px;
-    }
-    to {
-        max-height: 9999px;
-    }
-}*/
-
 
 .online {
 	color: #008A00;
