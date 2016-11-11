@@ -18,7 +18,7 @@ body {
 	
 	background-repeat: no-repeat;
 	background-color: #000000;
-	background-image: url(bg.jpg);
+	background-image: url(../img/bg.jpg);
 	background-position: 00px top center;
 	background-attachment: fixed;
 }
@@ -152,7 +152,7 @@ body {
 }
 
 /* FIELD LOADING ANIMATION */
-.field.right.no {
+/*.field.right.no {
 	overflow: hidden;
 
     -moz-animation-name: dropHeader;
@@ -194,7 +194,7 @@ body {
     to {
         max-height: 9999px;
     }
-}
+}*/
 
 
 .online {

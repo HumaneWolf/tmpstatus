@@ -1,0 +1,17 @@
+{
+    "name": "humanewolf/tmpstatus",
+    "description": "TruckersMP Server Status",
+    "authors": [
+        {
+            "name": "HumaneWolf",
+            "email": "kristian@humanewolf.com"
+        }
+    ],
+    "type": "project",
+    "license": "MIT",
+    "minimum-stability": "dev",
+    "require": {
+        "php-http/guzzle6-adapter": "^1.1",
+        "truckersmp/api-client": "*"
+    }
+}
