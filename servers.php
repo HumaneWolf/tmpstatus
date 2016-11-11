@@ -20,6 +20,7 @@ class Servers {
 		$servers = $this->client->servers();
 
 		file_put_contents($this->serversPath, json_encode($servers->servers));
+		file_put_contents($this->timePath, time());
 	}
 
 	function fetchAsJson() {
