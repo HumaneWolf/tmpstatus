@@ -47,7 +47,7 @@ foreach ($s as $r) {
 		$queue = 'None';
 	} else {
 		$waitTimeModifier = 0.7;
-		$sec =round($r->queue * $waitTimeModifier);
+		$sec = floor($r->queue * $waitTimeModifier);
 		$min = 0;
 		$hrs = 0;
 		
