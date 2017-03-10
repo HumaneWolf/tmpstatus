@@ -51,9 +51,9 @@ foreach ($s as $r) {
 		$min = 0;
 		$hrs = 0;
 		
-		$min = round($sec / 60);
+		$min = floor($sec / 60);
 		$sec = $sec - ($min * 60);
-		$hrs = round($min / 60);
+		$hrs = floor($min / 60);
 		$min = $min - ($hrs * 60);
 
 		$waitTime = $hrs . ':' . str_pad($min, 2, '0', STR_PAD_LEFT) . ':' . str_pad($sec, 2, '0', STR_PAD_LEFT);
